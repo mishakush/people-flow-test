@@ -1,0 +1,26 @@
+server.port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: emp_man
+    password: emp_man
+    driver-class-name: org.postgresql.Driver
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          public-key-location: classpath:peopleflow_public_dev.pem
+          resource-id: employee-management
+          iss: peopleflow-auth
+
+springdoc.swagger-ui.path: /swagger-ui.html
+
+application.code: EMPMAN
+
+#kafka-topics:
+#  email-2fa:
+#    name: email-2fa
+#    partitions: 1
+#    replicas: 3
+#    isr: 2

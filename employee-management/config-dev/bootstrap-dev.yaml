@@ -1,0 +1,13 @@
+spring:
+  application.name: employee-management
+  #  cloud:
+  #    config:
+  #      enabled: false
+  cloud:
+    config:
+      uri: http://localhost:8888
+      fail-fast: true
+      label: main
+#      name: employee-management,employee-management-access,bootstrap
+#      import: configserver:http://localhost:8888
+#      import-check.enabled: false

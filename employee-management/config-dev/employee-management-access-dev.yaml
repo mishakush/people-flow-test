@@ -1,0 +1,22 @@
+###matchers###
+
+security-props:
+
+  resource-matchers:
+    - method: POST
+      path: /unlimited/employee
+      access: hasAuthority('MANAGER_PRIVILEGE')
+
+  resource-ignoring:
+    - method: GET
+      path: /error
+    - method: GET
+      path: /swagger-ui.html
+    - method: GET
+      path: /swagger-ui/**
+    - method: GET
+      path: /v3/api-docs/**
+
+  privileges:
+    manager_role:
+      - MANAGER_PRIVILEGE
